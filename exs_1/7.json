@@ -4,5 +4,5 @@
   "c": "[(Bool, Char)]",
   "d": "([Bool], [Char])",
   "e": "[[a] -> [a]]",
-  "f": "Bool -> Bool ????"
+  "f": "Bool -> Bool"
 }
