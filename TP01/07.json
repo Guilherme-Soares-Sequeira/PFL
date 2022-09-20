@@ -1,0 +1,8 @@
+{
+  "a" : "String",
+  "b" : "(Char, Char, Char)",
+  "c" : "[(Bool, Char)]",
+  "d" : "([Bool], String)",
+  "e" : "[[a] -> [a]]",
+  "f" : "[Bool -> Bool]"
+}
