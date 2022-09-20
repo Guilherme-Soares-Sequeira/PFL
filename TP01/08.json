@@ -7,5 +7,5 @@
   "f" : "Char -> Bool",
   "g" : "Ord a => a -> a -> a -> Bool",
   "h" : "[a] -> Bool",
-  "i" : "a -> a -> a -> a"
+  "i" : "(a -> a) -> a -> a"
 }
