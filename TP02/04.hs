@@ -1,3 +1,7 @@
-divprop :: Integer -> [Integer]
+-- a
+insert :: Ord a => a -> [a] -> [a]
+insert num [] = [num]
+insert num (x:rest) | num <= x = num : (x : rest)
+  | otherwise = x : (insert num rest)
 
-divprop num = [x | x <- [1.. num `div` 2], num `mod` x == 0]
+

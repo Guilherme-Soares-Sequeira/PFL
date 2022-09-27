@@ -1,3 +1,3 @@
-dotprod :: [Float] -> [Float] -> Float
-
-dotprod a b = sum [ fst x * snd x | x <- (zip a b)]
+mdc :: Integer -> Integer -> Integer
+mdc a 0 = a
+mdc a b = mdc b (a `mod` b) 

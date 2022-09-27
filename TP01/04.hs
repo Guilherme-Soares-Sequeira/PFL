@@ -5,6 +5,11 @@ mylast x = head (drop (length x - 1) x)
 mylast' :: [a] -> a
 mylast' x = head (reverse x)
 
+mylast'' :: [a] -> a
+mylast'' [] = error "Tried to index empty list"
+mylast'' (x:rest) | null rest = x
+  | otherwise = mylast rest
+
 -- b
 
 myinit :: [a] -> [a]
