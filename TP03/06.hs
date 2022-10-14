@@ -1,0 +1,1 @@
+mdc a b = fst (until (\(x, y)-> y == 0) (\(x,y) -> (y, (x `mod` y))) (a,b))
