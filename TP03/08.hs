@@ -1,12 +1,17 @@
 import Data.List
 import Data.Maybe
-import Data.Textt
 
 -- a
---palavras :: String -> [String]
---palavras string = until (\x -> Nothing == (findIndex (== ' ') (last x))) (splitAt (findIndex (== ' ') )) string
+
+palavras :: String -> [String]
+palavras string = case spaceIndex of
+   Nothing ->  ([string | string /= ""])
+   Just num -> take num string : palavras (drop (num+1) string)
+   where spaceIndex = elemIndex ' ' string
 
 
-palavras string = let spaceIndex = findIndex (== ' ') in
-   splitAt (if ((spaceIndex string) == Nothing) then 1 else (fromJust (spaceIndex string))) string
-split (==' ') string
+-- b
+
+despalavras :: [String] -> String
+despalavras [] = ""
+despalavras (x:xs) = x ++ " " ++ despalavras xs
